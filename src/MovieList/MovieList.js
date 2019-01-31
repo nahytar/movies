@@ -4,7 +4,7 @@ import MovieCard from "../MovieCard/MovieCard";
 
 class MovieList extends React.Component {
   render = () => (
-    <div className="movieList">
+    <div>
       <h3>{this.props.title}</h3>
       <Row className="movie-list">
         {this.props.movies.map(movie => (
@@ -13,6 +13,7 @@ class MovieList extends React.Component {
             image={movie.poster_path}
             ranking={movie.vote_average}
             key={movie.id}
+            movieId={movie.id}
           />
         ))}
       </Row>

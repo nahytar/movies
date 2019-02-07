@@ -3,13 +3,7 @@ import { Card, Button } from "react-bootstrap";
 import "./MovieCard.css"
 
 class MovieCard extends React.Component {
-  addToFavorites(movie) {
-    const favorites = JSON.parse(localStorage.getItem('favoritiesMovies')) || []
-    favorites.push(movie)
-    localStorage.setItem('favoritiesMovies', JSON.stringify(favorites))
-  }
-
-  render = () => (
+   render = () => (
     <Card style={{ width: "10rem" }}>
       <Card.Img variant="top" src={`https://image.tmdb.org/t/p/w500/${this.props.movie.poster_path}`} />
       <Card.Body>

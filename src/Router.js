@@ -12,6 +12,7 @@ class Router extends Component {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/movie_description/:movieId" component={MovieDescription} />
+        <Route component={Error} />
 
       </Switch>
 

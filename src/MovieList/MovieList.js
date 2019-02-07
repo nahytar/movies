@@ -1,6 +1,7 @@
 import React from "react";
 import { Row } from "react-bootstrap";
 import MovieCard from "../MovieCard/MovieCard";
+import "./MovieList.css";
 
 class MovieList extends React.Component {
   render = () => (
@@ -9,11 +10,10 @@ class MovieList extends React.Component {
       <Row className="movie-list">
         {this.props.movies.map(movie => (
           <MovieCard
-            title={movie.title}
-            image={movie.poster_path}
-            ranking={movie.vote_average}
+            movie={movie}
             key={movie.id}
-            movieId={movie.id}
+            addToFavorites={this.props.addToFavorites}
+            removeFromFavorites={this.props.removeFromFavorites}
           />
         ))}
       </Row>
